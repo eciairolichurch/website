@@ -5,16 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // REPLACE THESE WITH YOUR ACTUAL GITHUB DETAILS
     const githubUsername = 'eciairolichurch'; 
     const repoName = 'website';
-    const folderPath = 'songs'; // The folder where your .pptx files are
+    const folderPath = 'songs'; 
 
-    // The GitHub API URL
     const apiUrl = `https://api.github.com/repos/${githubUsername}/${repoName}/contents/${folderPath}`;
 
-    let allSongs = []; // We will store the fetched songs here
+    let allSongs = []; 
 
-    // Function to display songs on the screen
     function renderSongs(songsToDisplay) {
-        songListContainer.innerHTML = ''; // Clear current list
+        songListContainer.innerHTML = ''; 
 
         if (songsToDisplay.length === 0) {
             songListContainer.innerHTML = '<li>No songs found matching your search.</li>';
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         songsToDisplay.forEach(song => {
-            // Remove the .pptx extension for a cleaner display name
             const cleanTitle = song.name.replace('.pptx', '').replace(/-/g, ' ').replace(/_/g, ' ');
             
             const li = document.createElement('li');
@@ -43,11 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(data => {
-            // Filter out anything that isn't a .pptx file
             allSongs = data.filter(file => file.name.endsWith('.pptx'));
             
-            // Display all songs initially
-            renderSongs(allSongs);
+            // REMOVED the line that displayed all songs automatically.
+            // Now, it just clears the "Loading songs..." text and waits.
+            songListContainer.innerHTML = ''; 
         })
         .catch(error => {
             console.error('Error fetching songs:', error);
@@ -56,14 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Listen for typed input in the search bar
     searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
+        const searchTerm = e.target.value.toLowerCase().trim();
         
+        // NEW RULE: If the search bar is completely empty, clear the screen and stop.
+        if (searchTerm === '') {
+            songListContainer.innerHTML = ''; 
+            return;
+        }
+
         // Filter the allSongs array based on what the user types
         const filteredSongs = allSongs.filter(song => {
             return song.name.toLowerCase().includes(searchTerm);
         });
 
-        // Update the screen with the filtered results
         renderSongs(filteredSongs);
     });
 });
