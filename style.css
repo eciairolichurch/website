@@ -25,6 +25,18 @@ body {
     scrollbar-width: none;     /* Firefox */
 }
 
+/* --- Global Reset & AOS Overflow Fix --- */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Hides elements placed off-screen by AOS */
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box; /* Prevents padding from adding extra width */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
