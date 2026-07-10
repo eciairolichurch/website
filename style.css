@@ -318,14 +318,11 @@ h2 {
 }
 
 footer {
-    background: var(--primary-color);
+    background-color: #2c3e50; /* Assuming this is your dark blue color */
     color: white;
-    margin-top: 0;
-    
-    /* Force a strict, small layout */
-    height: 35px;         /* Change this to make it even smaller if needed */
-    padding: 0 !important; /* Strips all internal pushing space */
     text-align: center;
+    padding: 15px 0; /* This is the key! It reduces the top and bottom space */
+    /* Remove any 'height' or 'min-height' properties if you have them */
 }
 
 /* Force whatever tag holds the copyright text to stay tiny and centered */
