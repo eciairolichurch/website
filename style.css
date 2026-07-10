@@ -52,6 +52,11 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* 1. ADD THIS FOR MOBILE COMPATIBILITY */
+    position: -webkit-sticky; 
+    /* 2. ADD !important TO OVERRIDE ANY CONFLICTS */
+    position: sticky !important; 
+    will-change: transform;
 }
 
 .header-content {
@@ -333,15 +338,6 @@ footer {
     text-align: center;
     padding: 15px 0; /* This is the key! It reduces the top and bottom space */
     /* Remove any 'height' or 'min-height' properties if you have them */
-}
-
-/* Force whatever tag holds the copyright text to stay tiny and centered */
-footer, 
-footer * {
-    margin: 0 !important;
-    padding: 0 !important;
-    font-size: 0.8rem !important;
-    line-height: 35px !important; /* Must match the height exactly to center text */
 }
 
 /* --- Form Validation Styles --- */
