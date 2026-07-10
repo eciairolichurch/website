@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('song-search');
     
     // REPLACE THESE WITH YOUR ACTUAL GITHUB DETAILS
-    const githubUsername = 'YOUR_GITHUB_USERNAME'; 
-    const repoName = 'YOUR_REPOSITORY_NAME';
+    const githubUsername = 'eciairolichurch'; 
+    const repoName = 'website';
     const folderPath = 'songs'; // The folder where your .pptx files are
 
     // The GitHub API URL
