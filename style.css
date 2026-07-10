@@ -317,10 +317,10 @@ h2 {
 
 footer {
     text-align: center;
-    padding: 5px;
+    padding: 20px;
     background: var(--primary-color);
     color: white;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 /* --- Form Validation Styles --- */
