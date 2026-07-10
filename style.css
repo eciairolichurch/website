@@ -207,7 +207,8 @@ h2 {
     display: block; /* Changed from inline-block */
     width: max-content; /* Keeps the button wrapped tightly around the text */
     margin: 20px auto; /* 'auto' centers it evenly on the left and right */
-    
+    align-items: center;
+    justify-content: center;
     /* The rest stays exactly the same */
     background-color: #ff0000;
     color: white;
