@@ -4,12 +4,6 @@
     --bg-color: #F5F5DC;
     --text-color: #333;
 }
-
-/* --- Global Smooth Scrolling --- */
-html {
-    scroll-behavior: smooth;
-}
-
 /* --- Hide Scrollbar but keep scrolling functionality --- */
 
 /* For Chrome, Safari, and Opera */
@@ -21,12 +15,14 @@ body::-webkit-scrollbar {
 /* For Firefox, IE, and Edge */
 html, 
 body {
+     scroll-behavior: smooth;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;     /* Firefox */
 }
 
 /* --- Global Reset & AOS Overflow Fix --- */
 html, body {
+     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden; /* Hides elements placed off-screen by AOS */
     margin: 0;
