@@ -319,12 +319,19 @@ h2 {
 
 footer {
     text-align: center;
-    padding: 0.4rem 0; /* Matches header top/bottom spacing */
+    padding: 10px 0; /* Tightened vertical padding */
     background: var(--primary-color);
     color: white;
     margin-top: 0px;
-    font-size: 0.9rem; /* Matches navigation link scale */
-    line-height: 1.2;  /* Matches header heading scale */
+}
+
+/* This fixes the hidden text issue forcing it to stay big */
+footer p, 
+footer span {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0.85rem; /* Matches the small header subtitle size */
+    line-height: 1;
 }
 
 /* --- Form Validation Styles --- */
