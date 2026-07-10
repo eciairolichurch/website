@@ -318,20 +318,23 @@ h2 {
 }
 
 footer {
-    text-align: center;
-    padding: 10px 0; /* Tightened vertical padding */
     background: var(--primary-color);
     color: white;
-    margin-top: 0px;
+    margin-top: 0;
+    
+    /* Force a strict, small layout */
+    height: 35px;         /* Change this to make it even smaller if needed */
+    padding: 0 !important; /* Strips all internal pushing space */
+    text-align: center;
 }
 
-/* This fixes the hidden text issue forcing it to stay big */
-footer p, 
-footer span {
+/* Force whatever tag holds the copyright text to stay tiny and centered */
+footer, 
+footer * {
     margin: 0 !important;
     padding: 0 !important;
-    font-size: 0.85rem; /* Matches the small header subtitle size */
-    line-height: 1;
+    font-size: 0.8rem !important;
+    line-height: 35px !important; /* Must match the height exactly to center text */
 }
 
 /* --- Form Validation Styles --- */
