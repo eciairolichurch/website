@@ -1,3 +1,3 @@
-### ECI St. Thomas Church Airol's Official Website
+### ECI St. Thomas Church Airoli's Official Website
 
-- made by prince
+- made by Prince :)
