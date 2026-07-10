@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECI St. Thomas Church - Airoli</title>
+    <link rel="icon" type="image/png" href="logo-of-the-evangelical-church-of-india_orig-Photoroom.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="logo-of-the-evangelical-church-of-india_orig-Photoroom.png" alt="ECI Logo">
+                <div class="church-titles">
+                    <h1>ECI St. Thomas Church - Airoli</h1>
+                    <p>Mumbai Diocese - Navi Mumbai</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#leaders">Pastor's</a>
+                <a href="#ministries">Service's</a>
+                <a href="#songs">Service Songs</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" data-aos="fade-up">
+        <h2>Welcome to ECI Airoli Church</h2>
+        <p>A place where faith comes alive and hearts are transformed through the Word of God. Based in Airoli, Navi Mumbai, we are a loving church family committed to worship, fellowship, and growing in Christ together.</p>
+        <p>Explore our website to discover more about our ministries, stay updated on church events, and find resources for your spiritual growth. Our desire is to encourage, uplift, and help you walk closer with God every day.</p>
+        <p>No matter where you are on your spiritual journey, you are always welcome to be a part of our church family.</p>
+
+        <h3>Our Leaders</h3>
+        
+        <!-- 3 Cards in a Row -->
+        <div class="pastors-row">
+            <!-- Card 1 -->
+            <div class="pastor-card-1">
+                <img src="Father Bishop Ezra Ayya.jpg" alt="Pastor Image" onerror="this.src='https://via.placeholder.com/120?text=Pastor'">
+                <div>
+                    <h4>Father Bishop Dr. M. Ezra Sargunam</h4>
+                    <p>Father Bishop</p>
+                    <p>Evangelical Church of India</p>
+                </div>
+            </div>
+
+            <!-- Card 2 (Replace details as needed) -->
+            <div class="pastor-card-2">
+                <img src="Bishop President.png" alt="Pastor Image" onerror="this.src='https://via.placeholder.com/120?text=Pastor'">
+                <div>
+                    <h4>The Most Rev. Dr. Stephen E Daniel</h4>
+                    <p>Bishop President</p>
+                    <p>Evangelical Church of India</p>
+                </div>
+            </div>
+
+            <!-- Card 3 (Replace details as needed) -->
+            <div class="pastor-card-3">
+                <img src="Bishop Ayya Img.jpeg" alt="Pastor Image" onerror="this.src='https://via.placeholder.com/120?text=Pastor'">
+                <div>
+                    <h4>Rt. Rev. Dr. T. Caleb Rajan</h4>
+                    <p>Bishop Mumbai Diocese</p>
+                    <p>Senior Pastor ECI Airoli Tamil Church</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://www.youtube.com/@eciairoli" target="_blank" class="youtube-btn">
+            Visit Our YouTube Channel
+        </a>
+    </section>
+
+    <section id="about" data-aos="fade-right">
+        <h2>About ECI</h2>
+        <p>The Evangelical Church of India (ECI) was founded by the Oriental Missionary Society, beginning its work in India in 1941. ECI's vision is to see a transformed India where every person has the opportunity to hear and respond to the Gospel. The church is committed to serving communities through evangelism, church planting, and holistic community development.</p>
+        <b>Goal of ECI:</b><h3 class="goal-text"> MARCHING TOWARDS THE CENTENARY VISION TO PLANT 100 THOUSAND CHURCHES</h3>
+    </section>
+
+    <section id="leaders" data-aos="fade-up">
+        <h2>Pastors-in-charge</h2>
+        <p>Meet the dedicated Pators who help guide and support our church community.</p>
+        <ul>
+            <li><strong>Rev. J. King Tony</strong> - Associate Pastor Tamil Church</li>
+            <li><strong>Rev. Ameer Panni</strong> - Pastor Hindi Church</li>
+        </ul>
+    </section>
+
+    <section id="ministries" data-aos="fade-left">
+        <h2>Our Service's</h2>
+        <ul>
+            <li><strong>Sunday Hindi Service:</strong> Every Sunday @ 8:00AM</li>
+            <li><strong>Sunday Tamil Service:</strong> Every Sunday @ 10:00AM</li>
+            <li><strong>Bible Study:</strong> Every Wednesday @ 7:00PM</li>    
+            <li><strong>Fasting Prayer:</strong> Every Friday @ 1:30PM (Tamil) & 7:00PM (Hindi)</li>
+            <li><strong>Half Night Prayer:</strong> 3rd Friday @ 9:00PM</li>
+        </ul>
+    </section>
+
+    <section id="songs" data-aos="zoom-in">
+        <h2>Service Songs</h2>
+        <p>Search and download our worship and service song presentations</p>
+        
+        <div class="search-container">
+            <input type="text" id="song-search" placeholder="Search for a song (e.g., ECI Anthem)...">
+        </div>
+
+        <ul class="song-list" id="dynamic-song-list">
+            <li>Loading songs...</li>
+            <!-- JavaScript will render the songs here -->
+        </ul>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> H-189, H-190, Sector 3, Airoli, Navi Mumbai 400 708</p>
+        
+        <!-- Replace YOUR_FORMSPREE_ID with the endpoint ID from Formspree -->
+        <form class="contact-form" action="https://formspree.io/f/mvzjeqrj" method="POST">
+            <div class="input-group">
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+        <small class="error-msg" id="name-error"></small>
+    </div>
+    
+    <div class="input-group">
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+        <small class="error-msg" id="email-error"></small>
+    </div>
+    
+    <div class="input-group">
+        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        <small class="error-msg" id="subject-error"></small>
+    </div>
+    
+    <div class="input-group">
+        <textarea name="message" rows="5" placeholder="Your message (optional)"></textarea>
+    </div>
+    
+    <button type="submit">Get in Touch</button>
+    </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ECI St. Thomas Church - Airoli. All Rights Reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
