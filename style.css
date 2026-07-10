@@ -361,7 +361,8 @@ input.invalid + .error-msg {
 }
 
 /* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
+/* --- 1. TABLETS (Max width: 768px) --- */
+@media screen and (max-width: 768px) {
     .header-content {
         flex-direction: column;
         text-align: center;
@@ -393,7 +394,7 @@ input.invalid + .error-msg {
     }
 
     .pastors-row {
-        flex-direction: column; /* Stacks the 3 cards vertically on phone screens */
+        flex-direction: column; /* Stacks the cards vertically */
     }
 
     .song-list li {
@@ -402,13 +403,47 @@ input.invalid + .error-msg {
         text-align: center;
     }
 
-    .song-list a {
-        width: 100%; 
-        box-sizing: border-box;
-    }
-    
+    .song-list a, 
     .youtube-btn {
         width: 100%; 
         box-sizing: border-box;
+    }
+
+    /* Fixes the 50% width on the contact form from earlier */
+    .contact-form input, 
+    .contact-form textarea, 
+    .contact-form button {
+        width: 100%; 
+    }
+}
+
+/* --- 2. MOBILE PHONES (Max width: 480px) --- */
+@media screen and (max-width: 480px) {
+    
+    /* Shrink headings so they fit neatly on narrow screens */
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Reduce spacing around sections to maximize screen real estate */
+    section {
+        margin: 15px 10px;
+        padding: 15px 10px;
+    }
+
+    /* Fine-tune the Search Bar */
+    #song-search {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+    
+    /* Keep footer compact */
+    footer {
+        padding: 10px 0;
+        font-size: 0.9rem;
     }
 }
