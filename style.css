@@ -421,11 +421,13 @@ input.invalid + .error-msg {
         box-sizing: border-box;
     }
 
-    /* Fixes the 50% width on the contact form from earlier */
+    /* Fixes the width on the contact form */
     .contact-form input, 
     .contact-form textarea, 
     .contact-form button {
         width: 100%; 
+        max-width: 100%; /* Prevents them from ever exceeding the screen */
+        box-sizing: border-box; /* Forces padding to stay inside the 100% width */
     }
 }
 
