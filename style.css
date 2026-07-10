@@ -320,7 +320,7 @@ footer {
     padding: 20px;
     background: var(--primary-color);
     color: white;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 /* --- Form Validation Styles --- */
