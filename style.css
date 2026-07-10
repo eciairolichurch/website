@@ -5,6 +5,10 @@
     --text-color: #333;
 }
 /* --- Hide Scrollbar but keep scrolling functionality --- */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px; /* Tells the scroll to stop 120px early to make room for your header! */
+}
 
 /* For Chrome, Safari, and Opera */
 html::-webkit-scrollbar, 
@@ -15,16 +19,14 @@ body::-webkit-scrollbar {
 /* For Firefox, IE, and Edge */
 html, 
 body {
-     scroll-behavior: smooth;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;     /* Firefox */
 }
 
-/* --- Global Reset & AOS Overflow Fix --- */
+/* --- Global Reset & Overflow Fix --- */
 html, body {
-     scroll-behavior: smooth;
     max-width: 100%;
-    overflow-x: hidden; /* Hides elements placed off-screen by AOS */
+    overflow-x: clip; /* Changed from 'hidden' to 'clip' */
     margin: 0;
     padding: 0;
 }
