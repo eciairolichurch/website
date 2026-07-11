@@ -379,12 +379,23 @@ input.invalid + .error-msg {
         gap: 10px;
     }
 
+    /* Replace your current mobile 'nav' block with this */
     nav {
         margin-top: 15px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: nowrap; /* Forces a single line */
+        justify-content: flex-start; 
         gap: 10px;
+        
+        /* Adds horizontal swiping */
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; /* Makes swiping smooth on phones */
+        padding-bottom: 10px; /* Gives a little breathing room at the bottom */
+    }
+
+    /* Optional: This hides the ugly horizontal scrollbar but keeps the swipe function */
+    nav::-webkit-scrollbar {
+        display: none;
     }
 
     nav a {
@@ -392,6 +403,7 @@ input.invalid + .error-msg {
         padding: 8px 12px; 
         background-color: rgba(255, 255, 255, 0.1); 
         border-radius: 4px;
+        flex-shrink: 0;
     }
 
     section {
