@@ -70,6 +70,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// --- Hamburger Menu Logic ---
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navLinks = document.getElementById('nav-links');
+
+// Listen for a click on the hamburger button
+hamburgerBtn.addEventListener('click', () => {
+    // This toggles the "active" class on and off, which shows/hides the menu in CSS
+    navLinks.classList.toggle('active');
+});
+
+// Optional but highly recommended: Close the menu automatically when a link is clicked
+const navItems = navLinks.querySelectorAll('a');
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
 // --- Initialize AOS (Animate On Scroll) ---
 AOS.init({
     duration: 800,   // How long the animation takes (in milliseconds)
