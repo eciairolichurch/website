@@ -382,8 +382,8 @@ input.invalid + .error-msg {
    nav {
         margin-top: 15px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: wrap; /* This tells the buttons to stack on new lines */
+        justify-content: center; /* Centers the buttons nicely */
         gap: 10px;
     }
 
