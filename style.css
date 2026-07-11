@@ -374,6 +374,9 @@ input.invalid + .error-msg {
 /* --- Mobile Responsiveness --- */
 /* --- 1. TABLETS (Max width: 768px) --- */
 @media screen and (max-width: 768px) {
+    header {
+        position: relative !important; 
+    }
     .header-content {
         flex-direction: column;
         text-align: center;
