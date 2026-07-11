@@ -345,6 +345,11 @@ footer {
     /* Remove any 'height' or 'min-height' properties if you have them */
 }
 
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
 /* --- Form Validation Styles --- */
 .input-group {
     display: flex;
